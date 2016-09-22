@@ -40,6 +40,10 @@ public class MaxSumOfSubArray {
         return max;
     }
 
+    /**
+     *使用递归的方法求解：减小原问题的规模(分而治之，减而知之)最后使用递归基逐步返回结果
+     *时间复杂度：
+     */
     public static int fun2(int[] a){
 
         return 1;
