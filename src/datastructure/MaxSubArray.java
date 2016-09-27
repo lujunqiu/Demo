@@ -75,14 +75,14 @@ public class MaxSubArray {
             }
         }
         temp = 0;
-        for (int i = mid + 1; i <= right; i++) {
-            temp += a[i];
-            if (rightSum < temp) {
-                rightSum = temp;
-            }
+    for (int i = mid + 1; i <= right; i++) {
+        temp += a[i];
+        if (rightSum < temp) {
+            rightSum = temp;
         }
-        return leftSum + rightSum;
     }
+    return leftSum + rightSum;
+}
 
     /**
      *动态规划求解：动态规划求解问题的特点当前状态是历史的完全总结，过程的演变不再受此前各种状态及决策的影响。
