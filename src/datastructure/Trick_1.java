@@ -2,7 +2,7 @@ package datastructure;
 
 /**
  * Created by Lujunqiu on 2016/9/27.
- * Given an array of three colors.
+ * Given an array of three colors.（总共有3个元素，任意相邻的不同的2个元素融合成另外一个元素。给定一组输出元素的集合，在考虑了所有的组合情况下，最后得到的最少（个数）的输出结果是多少？）
  * The array elements have a special property. Whenever two elements of different colors become adjacent to each other, they merge into an element of the third color.
  * How many minimum number of elements can be there in array after considering all possible transformations.
  * 测试用例：
