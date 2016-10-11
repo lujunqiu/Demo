@@ -49,6 +49,7 @@ public class PartitionProblem {
         // initialize leftmost column, except part[0][0], as false
         for (i = 1; i <= sum/2; i++)
             part[i][0] = false;
+        //以上是边界的初始化，需要仔细思考其实际的意义，与后续算法的适配问题。
 
         // Fill the partition table in bottom up manner(自下而上迭代)
         for (i = 1; i <= sum/2; i++)
