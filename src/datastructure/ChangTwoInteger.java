@@ -24,15 +24,17 @@ public class ChangTwoInteger {
     }
     public static void swap(Integer i1 , Integer i2) {
         try {
-         //   Field f = Integer.class.getDeclaredField("value");//getDeclaredField()方法，暴力反射，是获得类上的字段，无论是公有还是私有的
-            Field f = i1.getClass().getDeclaredField("value");
+              Field f = Integer.class.getDeclaredField("value");//getDeclaredField()方法，暴力反射，是获得类上的字段，无论是公有还是私有的
+           // Field f = i1.getClass().getDeclaredField("value");
             f.setAccessible(true);//由于Integer内部保存int数值的变量value是private 和 final的，需要修改访问控制权限。
                                  // 传入的参数的值为 true 则指示反射的对象在使用时应该取消 Java 语言访问检查。值为 false 则指示反射的对象应该实施 Java 语言访问检查。
 
+            //下面代码交换了Integer的值，但是修改了内存里面的Integer（-128--127）数值的缓存。如果在代码最后运行 Integer a = 1; System.out.println(a);输出结果为2，具体原因参见我的有道笔记中的记载Integer类的源码实现方式。
 
             int temp = i1.intValue();
             f.setInt(i1, i2.intValue());
             f.setInt(i2,temp);
+
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
