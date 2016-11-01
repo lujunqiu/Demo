@@ -24,7 +24,8 @@ public class ChangTwoInteger {
     }
     public static void swap(Integer i1 , Integer i2) {
         try {
-            Field f = Integer.class.getDeclaredField("value");//getDeclaredField()方法，暴力反射，是获得类上的字段，无论是公有还是私有的
+         //   Field f = Integer.class.getDeclaredField("value");//getDeclaredField()方法，暴力反射，是获得类上的字段，无论是公有还是私有的
+            Field f = i1.getClass().getDeclaredField("value");
             f.setAccessible(true);//由于Integer内部保存int数值的变量value是private 和 final的，需要修改访问控制权限。
                                  // 传入的参数的值为 true 则指示反射的对象在使用时应该取消 Java 语言访问检查。值为 false 则指示反射的对象应该实施 Java 语言访问检查。
 
