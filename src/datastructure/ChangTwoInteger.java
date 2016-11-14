@@ -13,7 +13,7 @@ import java.lang.reflect.Field;
  * 最终，a和b还是指向对应的内存区域，而这个内存区域的值还是不变。所以，在函数外部是无法体现交换的结果的，swap这个函数等于啥都没干。
  * 通过查看Integer源码实现，实际内部将整数值存放在一个叫int类型的value变量里。他虽然有get函数，但是却没有set函数。因为他是final的（不可修改）！
 
- *  以上分析之后，使用常规的方法貌似已经无法解决我们的问题了，但是可以利用java的反射来帮助我们求解。
+ *  以上分析之后，使用常规的方法貌似已经无法解决我们的问题了，但是可以利用java的反射来帮助我们求解.
  */
 public class ChangTwoInteger {
     public static void  main(String[] args) {
